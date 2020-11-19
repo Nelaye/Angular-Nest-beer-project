@@ -1,0 +1,10 @@
+mat-toolbar a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  margin: 0px 10px 0px 10px;
+  border-bottom: 2px solid transparent;
+  font-size: 1.1em;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+}
