@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { FridgeComponent } from './fridge/fridge.component';
 import { HomeComponent } from './home/home.component';
-import {BeersComponent} from './beer/beers.component';
 import {MatCardModule} from '@angular/material/card';
 import { BeerLabelComponent } from './shared/beer-label/beer-label.component';
 import {MatListModule} from '@angular/material/list';
@@ -18,7 +17,6 @@ import {MatListModule} from '@angular/material/list';
     AppComponent,
     FridgeComponent,
     HomeComponent,
-    BeersComponent,
     BeerLabelComponent
   ],
   imports: [

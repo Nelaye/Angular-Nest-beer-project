@@ -16,7 +16,6 @@ export class BeerService {
 
     this._defaultBeer = {
       name: 'water',
-      brand: 'earth',
       country: 'world',
       brewery: 'ground',
       degree: 0,

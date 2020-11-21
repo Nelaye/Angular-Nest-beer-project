@@ -1,7 +1,15 @@
-<section>
-  <mat-list>
-    <mat-list-item *bgFor="let beer of beers">
-      <h4> {{ beer.name }}</h4>
-    </mat-list-item>
-  </mat-list>
+<section >
+  <div >
+    <mat-list *ngFor="let beer of beers">
+      <h4> Degrée de la bière {{ beer.degree }}</h4>
+    </mat-list>
+
+  </div>
+  <h4> {{ beerOne.name }}</h4>
+
+  <app-beer-label [beer]="beer" *ngFor="let beer of beers"></app-beer-label>
 </section>
+
+
+
+
