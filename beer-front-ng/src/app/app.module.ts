@@ -19,6 +19,8 @@ import { FormComponent } from './shared/form/form.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { TestComponent } from './test/test.component';
 import { DialogComponent } from './shared/dialog/dialog.component';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { DialogComponent } from './shared/dialog/dialog.component';
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    MatRadioModule,
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
