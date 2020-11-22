@@ -1,9 +1,9 @@
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
 import {Injectable} from '@angular/core';
 import {Beer} from '../interfaces/beer';
 import {Observable} from 'rxjs';
-import {defaultIfEmpty, filter} from 'rxjs/operators';
+import {defaultIfEmpty, filter, map} from 'rxjs/operators';
 
 @Injectable()
 export class BeerService {
@@ -71,6 +71,37 @@ export class BeerService {
    */
   fetchOne(id: string): Observable<Beer> {
     return this._http.get<Beer>(this._backendURL.oneBeer.replace(':id', id));
+  }
+
+  /**
+   * Function to create a new beer
+   */
+  create(beer: Beer): Observable<any> {
+    return this._http.post<Beer>(this._backendURL.allBeers, beer, this._options());
+  }
+
+  /**
+   * Function to update one beer
+   */
+  update(id: string, beer: Beer): Observable<any> {
+    return this._http.put<Beer>(this._backendURL.oneBeers.replace(':id', id), beer, this._options());
+  }
+
+  /**
+   * Function to delete one beer for current id
+   */
+  delete(id: string): Observable<string> {
+    return this._http.delete(this._backendURL.oneBeers.replace(':id', id))
+      .pipe(
+        map(_ => id)
+      );
+  }
+
+  /**
+   * Function to return request options
+   */
+  private _options(headerList: object = {}): any {
+    return { headers: new HttpHeaders(Object.assign({ 'Content-Type': 'application/json' }, headerList)) };
   }
 
 }

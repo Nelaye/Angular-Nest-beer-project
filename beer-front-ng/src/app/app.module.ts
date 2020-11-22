@@ -5,19 +5,31 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { FridgeComponent } from './fridge/fridge.component';
 import { HomeComponent } from './home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import { BeerLabelComponent } from './shared/beer-label/beer-label.component';
 import {MatListModule} from '@angular/material/list';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormComponent } from './shared/form/form.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { TestComponent } from './test/test.component';
+import { DialogComponent } from './shared/dialog/dialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FridgeComponent,
     HomeComponent,
-    BeerLabelComponent
+    BeerLabelComponent,
+    TestComponent,
+    DialogComponent,
+    DialogComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +37,14 @@ import {MatListModule} from '@angular/material/list';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatDialogModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
