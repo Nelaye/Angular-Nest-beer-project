@@ -17,10 +17,12 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormComponent } from './shared/form/form.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { TestComponent } from './test/test.component';
+import { FridgeComponent } from './fridge/fridge.component';
 import { DialogComponent } from './shared/dialog/dialog.component';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+import { UpdateComponent } from './update/update.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -28,10 +30,11 @@ import {MatSelectModule} from '@angular/material/select';
     AppComponent,
     HomeComponent,
     BeerLabelComponent,
-    TestComponent,
+    FridgeComponent,
     DialogComponent,
     DialogComponent,
-    FormComponent
+    FormComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatFormFieldModule,
     MatRadioModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

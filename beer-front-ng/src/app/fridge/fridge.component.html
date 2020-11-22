@@ -1,0 +1,36 @@
+
+<mat-drawer-container class="container">
+
+  <mat-drawer #drawer mode="side">
+    <mat-selection-list #shoes>
+      <mat-list role="list" *ngFor="let beer of beers">
+        <mat-list-item>{{beer.name}}</mat-list-item>
+      </mat-list>
+    </mat-selection-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+
+    <section>
+      <app-beer-label [beer]="beer" *ngFor="let beer of beers"></app-beer-label>
+    </section>
+
+    <mat-divider></mat-divider>
+    <div>
+      <button type="button" mat-button (click)="drawer.toggle()">
+        < Mon fridge !
+      </button>
+    </div>
+
+    <section class="buttons-fab" *ngIf="dialogStatus === 'inactive'">
+      <button mat-fab color="primary" (click)="showDialog()">
+        <mat-icon>plus_one</mat-icon>
+      </button>
+    </section>
+
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+
+
