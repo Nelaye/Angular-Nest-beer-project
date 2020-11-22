@@ -6,20 +6,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.BeerModule = void 0;
 const common_1 = require("@nestjs/common");
-const beer_module_1 = require("./beer/beer.module");
+const beer_controller_1 = require("./beer.controller");
+const beer_service_1 = require("./beer.service");
+const beer_schema_1 = require("./schemas/beer.schema");
 const mongoose_1 = require("@nestjs/mongoose");
-const Config = require("config");
-let AppModule = class AppModule {
+const beer_dao_1 = require("./dao/beer.dao");
+let BeerModule = class BeerModule {
 };
-AppModule = __decorate([
+BeerModule = __decorate([
     common_1.Module({
-        imports: [
-            beer_module_1.BeerModule,
-            mongoose_1.MongooseModule.forRoot(Config.get('mongodb.uri'), Config.get('mongodb.options')),
-        ],
+        imports: [mongoose_1.MongooseModule.forFeature([{ name: beer_schema_1.Beer.name, schema: beer_schema_1.BeerSchema }])],
+        controllers, [beer_controller_1.BeerController]: ,
+        providers: [beer_service_1.BeerService, common_1.Logger, beer_dao_1.BeerDao],
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], BeerModule);
+exports.BeerModule = BeerModule;
+//# sourceMappingURL=beer.module.js.map

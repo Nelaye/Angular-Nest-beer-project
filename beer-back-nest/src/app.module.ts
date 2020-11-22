@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import {BeerModule} from "./beer/beer.module";
+import {MongooseModule, MongooseModuleOptions} from "@nestjs/mongoose";
+import * as Config from 'config';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+      BeerModule,
+      MongooseModule.forRoot(Config.get<string>('mongodb.uri'), Config.get<MongooseModuleOptions>('mongodb.options')),
+  ],
 })
 export class AppModule {}
