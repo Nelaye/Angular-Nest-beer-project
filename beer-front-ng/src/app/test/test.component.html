@@ -1,0 +1,11 @@
+<section>
+  <app-beer-label [beer]="beer" *ngFor="let beer of beers"></app-beer-label>
+</section>
+
+<mat-divider></mat-divider>
+
+<section class="buttons-fab">
+  <button mat-fab color="primary" (click)="showDialog()">
+    <mat-icon>plus_one</mat-icon>
+  </button>
+</section>

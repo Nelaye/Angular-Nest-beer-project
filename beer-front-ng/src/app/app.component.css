@@ -8,3 +8,7 @@ mat-toolbar a {
   font-weight: normal;
   font-family: 'Open Sans', sans-serif;
 }
+
+mat-toolbar .flex {
+  flex: 1 1 auto;
+}
