@@ -11,16 +11,17 @@
 
   <mat-drawer-content>
 
-    <section>
-      <app-beer-label [beer]="beer" *ngFor="let beer of beers"></app-beer-label>
-    </section>
-
-    <mat-divider></mat-divider>
     <div>
       <button type="button" mat-button (click)="drawer.toggle()">
         < Mon fridge !
       </button>
     </div>
+
+    <section>
+      <app-beer-label [beer]="beer" *ngFor="let beer of beers"></app-beer-label>
+    </section>
+
+    <mat-divider></mat-divider>
 
     <section class="buttons-fab" *ngIf="dialogStatus === 'inactive'">
       <button mat-fab color="primary" (click)="showDialog()">

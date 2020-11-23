@@ -22,14 +22,13 @@ export class FridgeComponent implements OnInit {
 
 
   constructor(private _dialog: MatDialog, private _beerService: BeerService) {
-    this._beers = BEERS;
+    this._beers;
     this._dialogStatus = 'inactive';
   }
 
   ngOnInit(): void {
-    /* this._beerService
+    this._beerService
       .fetch().subscribe((beers: Beer[]) => this._beers = beers); // get beers from service
-     */
   }
 
   /**
@@ -58,7 +57,6 @@ export class FridgeComponent implements OnInit {
       disableClose: true
     });
 
-    /*
     // subscribe to afterClosed observable to set dialog status and do process
     this._beerDialog.afterClosed()
       .pipe(
@@ -76,20 +74,18 @@ export class FridgeComponent implements OnInit {
         _ => this._dialogStatus = 'inactive',
         () => this._dialogStatus = 'inactive'
       );
-
-     */
   }
 
   /**
    * Add new beer and fetch all beers to refresh the list
    */
-  /*private _add(beer: Beer): Observable<Beer[]> {
+  private _add(beer: Beer): Observable<Beer[]> {
     return this._beerService
       .create(beer)
       .pipe(
         mergeMap(_ => this._beerService.fetch())
       );
-  }*/
+  }
 
   /**
    * Function to delete one beer

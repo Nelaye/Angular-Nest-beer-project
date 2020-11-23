@@ -15,8 +15,8 @@ export class BeerService {
   // private property to store default person
   private readonly _defaultBeer: Beer;
 
-  constructor(){
-    // private _http: HttpClient
+  constructor(private _http: HttpClient){
+
     this._defaultBeer = {
       name: 'water',
       country: 'world',
@@ -28,7 +28,7 @@ export class BeerService {
       observation: 'Alcohol is water'
     };
 
-    /*
+
     this._backendURL = {};
 
     // build backend base url
@@ -40,7 +40,7 @@ export class BeerService {
     // build all backend urls
     Object.keys(environment.backend.endpoints).forEach(k => this._backendURL[ k ] = `${baseUrl}${environment.backend.endpoints[ k ]}`);
 
-     */
+
   }
 
   /**
@@ -53,16 +53,14 @@ export class BeerService {
   /**
    * Function to return list of beer
    */
-  /*fetch(): Observable<Beer[]> {
+  fetch(): Observable<Beer[]> {
 
     return this._http.get<Beer[]>(this._backendURL.allBeers)
       .pipe(
         filter(_ => !!_),
         defaultIfEmpty([])
       );
-
-
-  }*/
+  }
 
   /**
    * Function to return one random beer from people list
@@ -85,9 +83,9 @@ export class BeerService {
   /**
    * Function to create a new beer
    */
-  /*create(beer: Beer): Observable<any> {
+  create(beer: Beer): Observable<any> {
     return this._http.post<Beer>(this._backendURL.allBeers, beer, this._options());
-  }*/
+  }
 
   /**
    * Function to update one beer
@@ -109,8 +107,8 @@ export class BeerService {
   /**
    * Function to return request options
    */
-  /*private _options(headerList: object = {}): any {
+  private _options(headerList: object = {}): any {
     return { headers: new HttpHeaders(Object.assign({ 'Content-Type': 'application/json' }, headerList)) };
-  }*/
+  }
 
 }

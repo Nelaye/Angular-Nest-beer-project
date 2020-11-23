@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Beer} from '../interfaces/beer';
 import {CustomValidator} from './custom-validator';
+import {stringify} from 'querystring';
 
 @Component({
   selector: 'app-form',
@@ -82,7 +83,26 @@ export class FormComponent implements OnInit, OnChanges {
   ngOnInit(): void {
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(record): void {
+    if (record.model && record.model.currentValue) {
+      this._model = record.model.currentValue;
+      this._isUpdateMode = true;
+    } else {
+      this._model = {
+        name: '',
+        brewery: '',
+        country: '',
+        degree: 0,
+        fermentation: '',
+        bitterness: 0,
+        thirst: 0,
+        observation: ''
+      };
+      this._isUpdateMode = false;
+    }
+
+    // update form's values with model
+    this._form.patchValue(this._model);
   }
 
   /**
@@ -104,11 +124,15 @@ export class FormComponent implements OnInit, OnChanges {
       observation: new FormControl('', Validators.compose([
         Validators.minLength(2)
       ])),
-      fermentation: new FormControl(),
-      bitterness: new FormControl(),
-      thirst: new FormControl(),
-      degree: new FormControl('', Validators.compose([
-        Validators.required, Validators.pattern("^[0-9]*$"), CustomValidator.degree
+      fermentation: new FormControl(''),
+      bitterness: new FormControl( 0, Validators.compose([
+        Validators.pattern('^[0-9]??[.]??[0-9]*$')
+      ])),
+      thirst: new FormControl( 0, Validators.compose([
+        Validators.pattern('^[0-9]??[.]??[0-9]*$')
+      ])),
+      degree: new FormControl(0, Validators.compose([
+        Validators.required, Validators.pattern('^[0-9]*$'), CustomValidator.degree
       ]))
     });
   }

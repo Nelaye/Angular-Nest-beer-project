@@ -21,6 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="620be40e-9100-4f73-88b9-000bb02a9f74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/beer/dto/create-beer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/beer/dto/create-beer.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beer-front-ng/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../beer-front-ng/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beer-front-ng/src/app/fridge/fridge.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../beer-front-ng/src/app/fridge/fridge.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beer-front-ng/src/app/fridge/fridge.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../beer-front-ng/src/app/fridge/fridge.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beer-front-ng/src/app/shared/form/form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../beer-front-ng/src/app/shared/form/form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beer-front-ng/src/app/shared/form/form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../beer-front-ng/src/app/shared/form/form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beer-front-ng/src/app/shared/service/beer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../beer-front-ng/src/app/shared/service/beer.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +70,7 @@
       <workItem from="1606080012053" duration="170000" />
       <workItem from="1606120954842" duration="146000" />
       <workItem from="1606136758773" duration="503000" />
+      <workItem from="1606149536911" duration="1047000" />
     </task>
     <servers />
   </component>

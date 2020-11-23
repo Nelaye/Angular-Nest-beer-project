@@ -23,6 +23,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import { UpdateComponent } from './update/update.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatRadioModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatSidenavModule
+    MatSidenavModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
