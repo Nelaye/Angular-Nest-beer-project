@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
-import {FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Beer} from '../interfaces/beer';
+import {CustomValidator} from './custom-validator';
 
 @Component({
   selector: 'app-form',
@@ -58,8 +59,8 @@ export class FormComponent implements OnInit, OnChanges {
   /**
    * Function to emit event to submit form and person
    */
-  submit(person: Beer): void {
-    this._submit$.emit(person);
+  submit(beer: Beer): void {
+    this._submit$.emit(beer);
   }
 
   /**
@@ -88,6 +89,27 @@ export class FormComponent implements OnInit, OnChanges {
    * Function to build our form
    */
   private _buildForm(): FormGroup{
-    return new FormGroup({});
+
+    return new FormGroup({
+
+      name: new FormControl('', Validators.compose([
+        Validators.required, Validators.minLength(2)
+      ])),
+      country: new FormControl('', Validators.compose([
+        Validators.minLength(2)
+      ])),
+      brewery: new FormControl( '', Validators.compose([
+        Validators.minLength(2)
+      ])),
+      observation: new FormControl('', Validators.compose([
+        Validators.minLength(2)
+      ])),
+      fermentation: new FormControl(),
+      bitterness: new FormControl(),
+      thirst: new FormControl(),
+      degree: new FormControl('', Validators.compose([
+        Validators.required, Validators.pattern("^[0-9]*$"), CustomValidator.degree
+      ]))
+    });
   }
 }

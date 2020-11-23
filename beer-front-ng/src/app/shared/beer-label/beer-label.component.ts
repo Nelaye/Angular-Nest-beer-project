@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Beer} from '../interfaces/beer';
 
 @Component({
@@ -10,8 +10,11 @@ export class BeerLabelComponent implements OnInit {
   // private property to store beer value
   private _beer: Beer;
 
+  private readonly _delete$: EventEmitter<Beer>;
+
   constructor() {
     this._beer = {} as Beer;
+    this._delete$ = new EventEmitter<Beer>();
   }
 
   /**
@@ -31,5 +34,20 @@ export class BeerLabelComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  /**
+   * Returns private property _delete$
+   */
+  @Output('deletePerson') get delete$(): EventEmitter<Beer> {
+    return this._delete$;
+  }
+
+  /**
+   * Function to emit event to delete current person
+   */
+  delete(beer: Beer): void {
+    //this._delete$.emit(beer);
+  }
+
 
 }

@@ -1,7 +1,102 @@
-<p>form works!</p>
+<p>Formulaire d'ajout d'une bière!</p>
 
 <mat-dialog-content>
+  <form novalidate [formGroup]="form">
+
+    <table class="full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field color="accent" class="middle-width" [class.mgb15]="form.get('name').dirty && form.get('name').invalid">
+            <input matInput placeholder="Nom" formControlName="name" minlength="2" required name="name" />
+            <mat-error *ngIf="form.get('name').dirty && form.get('name').hasError('required')">
+              Name is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="form.get('name').dirty && form.get('name').hasError('minlength')">
+              Name is <strong>2 chars min</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field color="accent" class="middle-width">
+            <input matInput placeholder="Pays" formControlName="country" minlength="2"  name="country" />
+            <mat-error *ngIf="form.get('country').dirty && form.get('country').hasError('minlength')">
+              Country is <strong>2 chars min</strong>
+            </mat-error>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <p>
+      <mat-form-field color="accent" class="full-width" >
+        <input matInput placeholder="Brasserie" formControlName="brewery" minlength="2"  name="brewery" />
+        <mat-error *ngIf="form.get('brewery').dirty && form.get('brewery').hasError('minlength')">
+          Brewery is <strong>2 chars min</strong>
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field color="accent" class="full-width" >
+        <input matInput placeholder="Observation" formControlName="observation" minlength="2" name="observation" />
+        <mat-error *ngIf="form.get('observation').dirty && form.get('observation').hasError('minlength')">
+          Brewery is <strong>2 chars min</strong>
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+    <mat-radio-group aria-label="Select an option" formControlName="fermentation" >Fermentation:
+      <mat-radio-button value="1">Haute</mat-radio-button>
+      <mat-radio-button value="2">Basse</mat-radio-button>
+    </mat-radio-group>
+
+    <table>
+      <tr>
+        <td class="middle-width">
+          <mat-form-field appearance="fill" color="accent" >
+            <mat-label>Ammertume</mat-label>
+            <select matNativeControl formControlName="bitterness">
+              <option value="" selected></option>
+              <option value="0">0</option>
+              <option value="0.5">0.5</option>
+              <option value="1">1</option>
+              <option value="1.5">1.5</option>
+              <option value="2">2</option>
+            </select>
+          </mat-form-field>
+        </td>
+        <td class="middle-width">
+          <mat-form-field appearance="fill" color="accent" >
+            <mat-label>Soif</mat-label>
+            <select matNativeControl formControlName="thirst">
+              <option value="" selected></option>
+              <option value="0">0</option>
+              <option value="0.5">0.5</option>
+              <option value="1">1</option>
+              <option value="1.5">1.5</option>
+              <option value="2">2</option>
+            </select>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <p>
+      <mat-form-field color="accent" >
+        <input matInput placeholder="Degree" formControlName="degree" minlength="1" required name="degree" />
+        <mat-error *ngIf="form.get('degree').dirty && form.get('degree').hasError('required')">
+          Degree is <strong>required</strong>
+        </mat-error>
+
+        <mat-error *ngIf="form.get('degree').dirty && form.get('degree').hasError('degree')">
+          Degree is <strong>out of range [0, 100]</strong>
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+  </form>
 </mat-dialog-content>
+
 <mat-dialog-actions align="end">
+  <button mat-button color="accent" type="submit" (click)="submit(form.value)" [disabled]="form.invalid">Save</button>
   <button mat-button type="button" (click)="cancel()">Cancel</button>
 </mat-dialog-actions>
