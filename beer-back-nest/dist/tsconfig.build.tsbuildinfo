@@ -1176,16 +1176,6 @@
         "signature": "6eeb1a88cf4672bc0b8688dae61da006052c7d39242c652bbd0dfc368effba9a",
         "affectsGlobalScope": false
       },
-      "../src/app.service.ts": {
-        "version": "5d4242d50092a353e5ab1f06663a89dbc714c7d9d70072ea03c83c5b14750f05",
-        "signature": "d8f4cb0109c1b399d657807fd6af504d74a9300325e0fc915abdbf658b464a97",
-        "affectsGlobalScope": false
-      },
-      "../src/app.controller.ts": {
-        "version": "3469c5aa62e1ba5b183d9bb9d40193e91aa761fc5734d332650b0bd49c346266",
-        "signature": "3293b0d1d6a7f902316e164fcf36ae099f1bbb0224484586eaab30d9dea78d32",
-        "affectsGlobalScope": false
-      },
       "../node_modules/rxjs/internal/operators/audit.d.ts": {
         "version": "e7774c53ead0968c88f97215ca417c0702e900719bb65925ba43ab9ae71e07ea",
         "signature": "e7774c53ead0968c88f97215ca417c0702e900719bb65925ba43ab9ae71e07ea",
@@ -2507,7 +2497,7 @@
         "affectsGlobalScope": false
       },
       "../src/beer/dto/create-beer.dto.ts": {
-        "version": "4dec11c9cae25ce18cf23e2a78c3fe1a9fb57b50a8c2960e723079c33507bf63",
+        "version": "464c986402d816aa91cf3f17759d8ce39dc02bb0ab7815a57d461de30947fe68",
         "signature": "0aabcae5b24944b0c95d1a422fd8ebef5a699fc2b16bda9df36ce49df764004b",
         "affectsGlobalScope": false
       },
@@ -2757,7 +2747,7 @@
         "affectsGlobalScope": false
       },
       "../src/beer/beer.controller.ts": {
-        "version": "ce61ac7f2eb99a3e9d8817eb27c77854a16362f1d936c1efff013e5b157f4ad0",
+        "version": "d26c4e10e1c485442b0b83fce8382ea586b9933dfcb694ac8b9ba6bdfdb78c64",
         "signature": "7d07c1767666f73a8aeec3670cedbcbc8d99f4dbb26f82c81dc7df48cdd9a1a9",
         "affectsGlobalScope": false
       },
@@ -6113,17 +6103,10 @@
         "../node_modules/rxjs/internal/operators/zip.d.ts",
         "../node_modules/rxjs/internal/operators/zipall.d.ts"
       ],
-      "../src/app.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/app.service.ts"
-      ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../src/beer/beer.module.ts"
-      ],
-      "../src/app.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../src/beer/beer.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -8734,9 +8717,6 @@
         "../node_modules/rxjs/internal/operators/zip.d.ts",
         "../node_modules/rxjs/internal/operators/zipall.d.ts"
       ],
-      "../src/app.controller.ts": [
-        "../src/app.service.ts"
-      ],
       "../src/beer/beer.controller.ts": [
         "../node_modules/rxjs/index.d.ts",
         "../src/beer/beer.service.ts",
@@ -9460,9 +9440,7 @@
       "../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
-      "../src/app.controller.ts",
       "../src/app.module.ts",
-      "../src/app.service.ts",
       "../src/beer/beer.controller.ts",
       "../src/beer/beer.module.ts",
       "../src/beer/beer.service.ts",

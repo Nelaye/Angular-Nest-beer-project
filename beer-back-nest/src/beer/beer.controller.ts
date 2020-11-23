@@ -30,7 +30,7 @@ import {
 import {BeerEntity} from "./entities/beer.entity";
 
 @ApiTags('beer')
-@Controller('beer' )
+@Controller('beers' )
 @UseInterceptors(ClassSerializerInterceptor)
 @UseInterceptors(BeerInterceptor)
 export class BeerController {

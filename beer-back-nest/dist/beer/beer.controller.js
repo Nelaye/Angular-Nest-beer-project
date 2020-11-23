@@ -128,7 +128,7 @@ __decorate([
 ], BeerController.prototype, "delete", null);
 BeerController = __decorate([
     swagger_1.ApiTags('beer'),
-    common_1.Controller('beer'),
+    common_1.Controller('beers'),
     common_1.UseInterceptors(common_1.ClassSerializerInterceptor),
     common_1.UseInterceptors(beer_interceptor_1.BeerInterceptor),
     __metadata("design:paramtypes", [beer_service_1.BeerService])
