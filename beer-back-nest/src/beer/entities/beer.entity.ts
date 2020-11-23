@@ -6,7 +6,7 @@ export class BeerEntity {
     @ApiProperty({
         name: 'id',
         description: 'Unique identifier in the database',
-        example: 243
+        example: '243'
     })
     @Expose()
     @Type(() => String)

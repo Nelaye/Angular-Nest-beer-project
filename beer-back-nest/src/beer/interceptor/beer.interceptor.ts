@@ -1,6 +1,6 @@
 import {CallHandler, ExecutionContext, Injectable, Logger, NestInterceptor} from "@nestjs/common";
 import {merge, Observable, of} from "rxjs";
-import { FatsifyReply } from 'fastify';
+import { FastifyReply } from 'fastify';
 import {filter, map, mergeMap, tap} from "rxjs/operators";
 
 @Injectable()
@@ -16,7 +16,7 @@ export class BeerInterceptor implements NestInterceptor {
     intercept(context: ExecutionContext, next: CallHandler<any>): Observable<any> {
         const cls = context.getClass();
         const handler = context.getHandler();
-        const response: FastifyReply = context.switchToHttp().getResponse()<FastifyReply>();
+        const response: FastifyReply = context.switchToHttp().getResponse<FastifyReply>();
         const logCtx = `BeerInterceptor => ${cls.name}.${handler.name}`;
 
         return next.handle()

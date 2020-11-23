@@ -20,7 +20,7 @@ let BeerInterceptor = class BeerInterceptor {
     intercept(context, next) {
         const cls = context.getClass();
         const handler = context.getHandler();
-        const response = context.switchToHttp().getResponse()();
+        const response = context.switchToHttp().getResponse();
         const logCtx = `BeerInterceptor => ${cls.name}.${handler.name}`;
         return next.handle()
             .pipe(operators_1.map(_ => rxjs_1.of(_)), operators_1.mergeMap((obs) => rxjs_1.merge(obs

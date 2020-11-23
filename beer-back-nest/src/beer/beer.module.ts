@@ -7,7 +7,7 @@ import { BeerDao } from './dao/beer.dao';
 
 @Module({
     imports: [ MongooseModule.forFeature( [ { name: Beer.name, schema: BeerSchema } ]) ],
-    controllers [ BeerController ],
+    controllers:[ BeerController ],
     providers: [ BeerService, Logger, BeerDao ],
 })
 export class BeerModule {}

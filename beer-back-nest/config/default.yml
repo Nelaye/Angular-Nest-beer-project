@@ -5,10 +5,15 @@ server:
     - "http://0.0.0.0:4200"
     - "http://127.0.0.1:4200"
     - "http://localhost:4200"
-  swagger:
-    title: Beer API
-    description: The Beer API description
-    version: 1.0
-    tag: beer
-    path: documentation
-
+swagger:
+  title: Beer API
+  description: The Beer API description
+  version: 1.0
+  tag: beer
+  path: documentation
+mongodb:
+  uri: mongodb://0.0.0.0:27017/nwt
+  options:
+    useNewUrlParser: true
+    useUnifiedTopology: true
+    useFindAndModify: false

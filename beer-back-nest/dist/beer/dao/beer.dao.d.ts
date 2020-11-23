@@ -7,8 +7,8 @@ export declare class BeerDao {
     private readonly _beerModel;
     constructor(_beerModel: Model<Beer>);
     find(): Observable<Beer[] | void>;
-    findById(id: number): Observable<Beer | void>;
+    findById(id: string): Observable<Beer | void>;
     save(beer: CreateBeerDto): Observable<Beer>;
-    findByIdAndUpdate(id: number, beer: UpdateBeerDto): Observable<Beer | void>;
-    findByIdAndRemove(id: number): Observable<Beer | void>;
+    findByIdAndUpdate(id: string, beer: UpdateBeerDto): Observable<Beer | void>;
+    findByIdAndRemove(id: string): Observable<Beer | void>;
 }

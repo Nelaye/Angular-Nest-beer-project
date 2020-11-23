@@ -8,9 +8,9 @@ export declare class BeerService {
     constructor(_beerDao: BeerDao);
     findAll(): Observable<BeerEntity[] | void>;
     findRandom(): Observable<BeerEntity | void>;
-    findOne(id: number): Observable<BeerEntity>;
+    findOne(id: string): Observable<BeerEntity>;
     create(beer: CreateBeerDto): Observable<BeerEntity>;
-    update(id: number, beer: UpdateBeerDto): Observable<BeerEntity>;
-    delete(id: number): Observable<void>;
+    update(id: string, beer: UpdateBeerDto): Observable<BeerEntity>;
+    delete(id: string): Observable<void>;
     private _addBeer;
 }

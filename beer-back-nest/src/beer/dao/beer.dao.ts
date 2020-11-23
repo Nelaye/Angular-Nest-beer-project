@@ -32,10 +32,10 @@ export class BeerDao {
     /**
      * Returns one beer of the list matching id in parameter
      *
-     * @param  {number} id of the beer in the db
+     * @param  {string} id of the beer in the db
      * @return {Observable<Beer | void>}
      * */
-    findById(id: number): Observable<Beer | void> {
+    findById(id: string): Observable<Beer | void> {
         return from(this._beerModel.findById(id))
             .pipe(
                 map((doc: MongooseDocument) => !!doc ? doc.toJSON() : undefined),
@@ -58,11 +58,11 @@ export class BeerDao {
     /**
      * Update a beer in beer list
      *
-     * @param {number} id
+     * @param {string} id
      * @param {UpdateBeerDto} beer
      * @return {Observable<Beer | void>}
      */
-    findByIdAndUpdate(id: number, beer: UpdateBeerDto): Observable<Beer | void> {
+    findByIdAndUpdate(id: string, beer: UpdateBeerDto): Observable<Beer | void> {
         return from(this._beerModel.findByIdAndUpdate(id, beer, {new: true, runValisators: true}))
             .pipe(
                 map((doc: MongooseDocument) => !!doc ? doc.toJSON() : undefined),
@@ -72,10 +72,10 @@ export class BeerDao {
     /**
      * Delete a beer in beer list
      *
-     * @param {number} id
+     * @param {string} id
      * @return {Observable<Beer | void>}
      */
-    findByIdAndRemove(id: number): Observable<Beer | void> {
+    findByIdAndRemove(id: string): Observable<Beer | void> {
         return from(this._beerModel.findByIdAndRemove(id))
             .pipe(
                 map((doc: MongooseDocument) => !!doc ? doc.toJSON : undefined),

@@ -55,13 +55,13 @@ export class BeerController {
     }
 
     /**
-     * Handler to answer to GET / beer/random route
+     * Handler to answer to GET /beer/random route
      *
      * @returns Observable<BeerEntity | void>
      */
     @ApiOkResponse({ description: 'Returns one beer randomly', type: BeerEntity })
     @ApiNoContentResponse({ description: 'No beer exists in database' })
-    @Get()
+    @Get('random')
     findRandom(): Observable<BeerEntity | void> {
         return this._beerService.findRandom();
     }
@@ -79,7 +79,7 @@ export class BeerController {
     @ApiParam({
         name: 'id',
         description: 'Unique identifier of the beer in the database',
-        type: Number,
+        type: String,
         allowEmptyValue: false,
     })
     @Get(':id')
@@ -118,13 +118,13 @@ export class BeerController {
     @ApiParam({
         name: 'id',
         description: 'Unique identifier of the beer in the database',
-        type: Number,
+        type: String,
         allowEmptyValue: false
     })
     @ApiBody({ description:'Payload to update a beer', type: UpdateBeerDto })
     @Put(':id')
-    update(@Param() parames: HandlerParams, @Body() updateBeerDto: UpdateBeerDto): Observable<BeerEntity> {
-        return this._beerService.update(parames.id, updateBeerDto);
+    update(@Param() params: HandlerParams, @Body() updateBeerDto: UpdateBeerDto): Observable<BeerEntity> {
+        return this._beerService.update(params.id, updateBeerDto);
     }
 
     /**
@@ -140,7 +140,7 @@ export class BeerController {
     @ApiParam({
         name: 'id',
         description: 'Unique identifier of the beer in the database',
-        type: Number,
+        type: String,
         allowEmptyValue: false
     })
     @Delete(':id')

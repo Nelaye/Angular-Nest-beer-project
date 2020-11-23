@@ -21,7 +21,7 @@ __decorate([
     swagger_1.ApiProperty({
         name: 'id',
         description: 'Unique identifier in the database',
-        example: 243
+        example: '243'
     }),
     class_transformer_1.Expose(),
     class_transformer_1.Type(() => String),

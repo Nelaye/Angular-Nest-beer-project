@@ -16,7 +16,7 @@ class HandlerParams {
 __decorate([
     class_validator_1.IsMongoId(),
     class_validator_1.IsNotEmpty(),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], HandlerParams.prototype, "id", void 0);
 exports.HandlerParams = HandlerParams;
 //# sourceMappingURL=handler-params.js.map

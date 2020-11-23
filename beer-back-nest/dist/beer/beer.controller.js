@@ -38,8 +38,8 @@ let BeerController = class BeerController {
     create(createBeerDto) {
         return this._beerService.create(createBeerDto);
     }
-    update(parames, updateBeerDto) {
-        return this._beerService.update(parames.id, updateBeerDto);
+    update(params, updateBeerDto) {
+        return this._beerService.update(params.id, updateBeerDto);
     }
     delete(params) {
         return this._beerService.delete(params.id);
@@ -56,7 +56,7 @@ __decorate([
 __decorate([
     swagger_1.ApiOkResponse({ description: 'Returns one beer randomly', type: beer_entity_1.BeerEntity }),
     swagger_1.ApiNoContentResponse({ description: 'No beer exists in database' }),
-    common_1.Get(),
+    common_1.Get('random'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", rxjs_1.Observable)
@@ -69,7 +69,7 @@ __decorate([
     swagger_1.ApiParam({
         name: 'id',
         description: 'Unique identifier of the beer in the database',
-        type: Number,
+        type: String,
         allowEmptyValue: false,
     }),
     common_1.Get(':id'),
@@ -99,7 +99,7 @@ __decorate([
     swagger_1.ApiParam({
         name: 'id',
         description: 'Unique identifier of the beer in the database',
-        type: Number,
+        type: String,
         allowEmptyValue: false
     }),
     swagger_1.ApiBody({ description: 'Payload to update a beer', type: update_beer_dto_1.UpdateBeerDto }),
@@ -117,7 +117,7 @@ __decorate([
     swagger_1.ApiParam({
         name: 'id',
         description: 'Unique identifier of the beer in the database',
-        type: Number,
+        type: String,
         allowEmptyValue: false
     }),
     common_1.Delete(':id'),

@@ -18,7 +18,7 @@ let BeerModule = class BeerModule {
 BeerModule = __decorate([
     common_1.Module({
         imports: [mongoose_1.MongooseModule.forFeature([{ name: beer_schema_1.Beer.name, schema: beer_schema_1.BeerSchema }])],
-        controllers, [beer_controller_1.BeerController]: ,
+        controllers: [beer_controller_1.BeerController],
         providers: [beer_service_1.BeerService, common_1.Logger, beer_dao_1.BeerDao],
     })
 ], BeerModule);

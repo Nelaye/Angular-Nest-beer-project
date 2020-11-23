@@ -43,10 +43,10 @@ export class BeerService {
     /**
      * Returns one beer of the list matching id in parameter
      *
-     * @param {number} id of th beer
+     * @param {string} id of th beer
      * @returns {Observable<BeerEntity>}
      */
-    findOne(id: number): Observable<BeerEntity> {
+    findOne(id: string): Observable<BeerEntity> {
         return this._beerDao.findById(id).pipe(
             catchError(e => throwError(new UnprocessableEntityException(e.message))),
             mergeMap(_ =>
@@ -80,11 +80,11 @@ export class BeerService {
     /**
      * Update a beer in beer list
      *
-     * @param {number} id of the beer to update
+     * @param {string} id of the beer to update
      * @param beer data to update
      * @returns {Observable<BeerEntity>}
      */
-    update(id: number, beer: UpdateBeerDto): Observable<BeerEntity> {
+    update(id: string, beer: UpdateBeerDto): Observable<BeerEntity> {
         return this._beerDao.findByIdAndUpdate(id, beer)
             .pipe(
                 catchError(e =>
@@ -105,10 +105,10 @@ export class BeerService {
     /**
      * Deletes one beer in beer list
      *
-     * @param {number} id of the beer to delete
+     * @param {string} id of the beer to delete
      * @returns {Observable<void>}
      */
-    delete(id: number): Observable<void> {
+    delete(id: string): Observable<void> {
         return this._beerDao.findByIdAndRemove(id)
             .pipe(
                 catchError(e => throwError(new UnprocessableEntityException(e.message))),

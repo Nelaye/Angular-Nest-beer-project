@@ -1,4 +1,3 @@
-import * as mongoose from 'mongoose';
 import { Document } from 'mongoose';
 import { Prop, raw, Schema, SchemaFactory } from "@nestjs/mongoose";
 

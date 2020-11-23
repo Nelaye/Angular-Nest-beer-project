@@ -11,6 +11,6 @@ export declare class BeerController {
     findRandom(): Observable<BeerEntity | void>;
     findOne(params: HandlerParams): Observable<BeerEntity>;
     create(createBeerDto: CreateBeerDto): Observable<BeerEntity>;
-    update(parames: HandlerParams, updateBeerDto: UpdateBeerDto): Observable<BeerEntity>;
+    update(params: HandlerParams, updateBeerDto: UpdateBeerDto): Observable<BeerEntity>;
     delete(params: HandlerParams): Observable<void>;
 }
