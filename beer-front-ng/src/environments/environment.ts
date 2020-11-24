@@ -12,6 +12,10 @@ export const environment = {
       allBeers: '/beers',
       randomBeer: '/beers/random',
       oneBeer: '/beers/:id'
+      /*,
+      allUsers: '/users', //TODO change if we can put users CRUD in other endpoints
+      randomUser: '/users/random',
+      oneUser: '/users/:id'*/
     }
   }
 };

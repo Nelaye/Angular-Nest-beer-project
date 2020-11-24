@@ -84,6 +84,7 @@ export class FormComponent implements OnInit, OnChanges {
    * Function to emit event to submit form and person
    */
   submit(beer: Beer): void {
+    console.log("submit: "+beer.id)
     beer.bitterness = +beer.thirst; // convertion to number (without "")
     beer.thirst = +beer.bitterness;
     this._submit$.emit(beer);
@@ -121,6 +122,7 @@ export class FormComponent implements OnInit, OnChanges {
 
     return new FormGroup({
 
+      id: new FormControl(),
       name: new FormControl('', Validators.compose([
         Validators.required, Validators.minLength(2)
       ])),
@@ -133,7 +135,7 @@ export class FormComponent implements OnInit, OnChanges {
       observation: new FormControl('', Validators.compose([
         Validators.minLength(2)
       ])),
-      fermentation: new FormControl(''),
+      fermentation: new FormControl('haute'),
       bitterness: new FormControl( 0, Validators.compose([
         Validators.pattern('^[0-9]??[.]??[0-9]*$')
       ])),

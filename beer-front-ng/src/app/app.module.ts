@@ -16,7 +16,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormComponent } from './shared/form/form.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FridgeComponent } from './fridge/fridge.component';
 import { DialogComponent } from './shared/dialog/dialog.component';
 import {MatRadioModule} from '@angular/material/radio';
@@ -38,26 +38,27 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     FormComponent,
     UpdateComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatListModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCheckboxModule,
-    MatDialogModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatRadioModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    MatSidenavModule,
-    HttpClientModule,
-    MatPaginatorModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatCardModule,
+        MatListModule,
+        MatButtonModule,
+        MatIconModule,
+        MatCheckboxModule,
+        MatDialogModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatRadioModule,
+        ReactiveFormsModule,
+        MatSelectModule,
+        MatSidenavModule,
+        HttpClientModule,
+        MatPaginatorModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

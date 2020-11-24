@@ -63,7 +63,7 @@ export class BeerService {
   }
 
   /**
-   * Function to return one random beer from people list
+   * Function to return one random beer from beer list
    */
   /*fetchRandom(): Observable<Beer> {
     return this._http.get<Beer>(this._backendURL.randomBeer)

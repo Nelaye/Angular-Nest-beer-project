@@ -3,7 +3,16 @@
   <button [routerLink]="['/home']" mat-icon-button color="white" aria-label="Example icon button with a home icon">
     <mat-icon>home</mat-icon>
   </button>
+
+  <select matNativeControl>
+    <!--<option *ngFor="let user of users" [value]="user">{{user}}</option>-->
+    <option>User 1</option>
+    <option>User 2</option>
+    <option>User 3</option>
+  </select>
+
   <span class="flex"></span>
+
   <span>
     <a [routerLink]="['/fridge']">Fridge</a>
   </span>
