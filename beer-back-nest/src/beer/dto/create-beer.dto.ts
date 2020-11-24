@@ -9,13 +9,11 @@ export class CreateBeerDto {
 
     @ApiProperty({name: 'country', description: 'Origin country of beer', example: 'Belgique'})
     @IsString()
-    @IsEmpty()
     @IsOptional()
     country: string;
 
     @ApiProperty({name: 'brewery', description: 'Brewery of beer', example: 'Lefèbvre'})
     @IsString()
-    @IsEmpty()
     @IsOptional()
     brewery: string;
 
@@ -26,7 +24,6 @@ export class CreateBeerDto {
 
     @ApiProperty({ name: 'fermentation', description: 'Fermentation of beer', example: 'haute' })
     @IsString()
-    @IsEmpty()
     @IsOptional()
     fermentation: string;
 
@@ -42,7 +39,6 @@ export class CreateBeerDto {
 
     @ApiProperty({ name: 'observation', description: 'Observation of beer', example: 'Bière au miel'})
     @IsString()
-    @IsEmpty()
     @IsOptional()
     observation?: string;
 }

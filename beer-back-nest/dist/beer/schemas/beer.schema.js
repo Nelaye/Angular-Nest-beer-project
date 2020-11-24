@@ -25,7 +25,7 @@ __decorate([
 __decorate([
     mongoose_2.Prop({
         type: String,
-        required: true,
+        required: false,
         trim: true,
     }),
     __metadata("design:type", String)
@@ -33,7 +33,7 @@ __decorate([
 __decorate([
     mongoose_2.Prop({
         type: String,
-        required: true,
+        required: false,
         trim: true,
     }),
     __metadata("design:type", String)
@@ -50,7 +50,7 @@ __decorate([
 __decorate([
     mongoose_2.Prop({
         type: String,
-        required: true,
+        required: false,
         trim: true,
     }),
     __metadata("design:type", String)
@@ -58,7 +58,7 @@ __decorate([
 __decorate([
     mongoose_2.Prop({
         type: Number,
-        required: true,
+        required: false,
         min: 0.0,
         max: 2.0,
     }),
@@ -67,7 +67,7 @@ __decorate([
 __decorate([
     mongoose_2.Prop({
         type: Number,
-        required: true,
+        required: false,
         min: 0.0,
         max: 2.0
     }),
@@ -76,7 +76,7 @@ __decorate([
 __decorate([
     mongoose_2.Prop({
         type: String,
-        required: true,
+        required: false,
         trim: true,
     }),
     __metadata("design:type", String)

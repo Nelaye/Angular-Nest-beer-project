@@ -6,6 +6,8 @@ import {DialogComponent} from '../shared/dialog/dialog.component';
 import {BeerService} from '../shared/service/beer.service';
 import {filter, map, mergeMap} from 'rxjs/operators';
 import {Observable} from 'rxjs';
+import {PageEvent} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-test',
@@ -20,10 +22,17 @@ export class FridgeComponent implements OnInit {
   // private property to store dialog reference
   private _beerDialog: MatDialogRef<DialogComponent>;
 
+  private _pageSize: number;
+  private index: number;
+  private mtds: MatTableDataSource<Beer[]>;
+
 
   constructor(private _dialog: MatDialog, private _beerService: BeerService) {
-    this._beers;
+    this._beers = [] as Beer[];
     this._dialogStatus = 'inactive';
+    this._pageSize = 8;
+    this.mtds = new MatTableDataSource<Beer[]>();
+    this.index = 0;
   }
 
   ngOnInit(): void {
@@ -43,6 +52,10 @@ export class FridgeComponent implements OnInit {
    */
   get dialogStatus(): string {
     return this._dialogStatus;
+  }
+
+  get pageSize(): number{
+    return this._pageSize;
   }
 
   /**
@@ -91,8 +104,32 @@ export class FridgeComponent implements OnInit {
    * Function to delete one beer
    */
   delete(beer: Beer): void {
-    /*this._beerService
+    this._beerService
       .delete(beer.id)
-      .subscribe(_ => this._beers = this._beers.filter(__ => __.id !== _));*/
+      .subscribe(_ => this._beers = this._beers.filter(__ => __.id !== _));
+  }
+
+  pageEvent($event: PageEvent) {
+    this.index = $event.pageIndex;
+  }
+
+  refresh() {
+    this.mtds.data.shift();
+    this.mtds.data.push(this.tab());
+  }
+
+  private tab(): Beer[] {
+    let tab = [] as Beer[];
+    for (let i = 0; i < this.pageSize; i++){
+      if(this._beers[i+(this.index*this.pageSize)]) {
+        tab.push(this._beers[i + (this.index*this.pageSize)]);
+      }
+    }
+    return tab;
+  }
+
+  get binouzes(): Beer[]{
+    this.refresh();
+    return this.mtds.data.shift();
   }
 }

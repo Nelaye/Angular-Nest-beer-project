@@ -76,9 +76,9 @@ export class BeerService {
   /**
    * Function to return one beer for current id
    */
-  /*fetchOne(id: string): Observable<Beer> {
+  fetchOne(id: string): Observable<Beer> {
     return this._http.get<Beer>(this._backendURL.oneBeer.replace(':id', id));
-  }*/
+  }
 
   /**
    * Function to create a new beer
@@ -90,19 +90,19 @@ export class BeerService {
   /**
    * Function to update one beer
    */
-  /*update(id: string, beer: Beer): Observable<any> {
-    return this._http.put<Beer>(this._backendURL.oneBeers.replace(':id', id), beer, this._options());
-  }*/
+  update(id: string, beer: Beer): Observable<any> {
+    return this._http.put<Beer>(this._backendURL.oneBeer.replace(':id', id), beer, this._options());
+  }
 
   /**
    * Function to delete one beer for current id
    */
-  /*delete(id: string): Observable<string> {
-    return this._http.delete(this._backendURL.oneBeers.replace(':id', id))
+  delete(id: string): Observable<string> {
+    return this._http.delete(this._backendURL.oneBeer.replace(':id', id))
       .pipe(
         map(_ => id)
       );
-  }*/
+  }
 
   /**
    * Function to return request options

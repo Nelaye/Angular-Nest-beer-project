@@ -12,14 +12,14 @@ export class Beer extends Document {
 
     @Prop({
         type: String,
-        required: true,
+        required: false,
         trim: true,
     })
     country: string;
 
     @Prop({
         type: String,
-        required: true,
+        required: false,
         trim: true,
     })
     brewery: string;
@@ -34,14 +34,14 @@ export class Beer extends Document {
 
     @Prop({
         type: String,
-        required: true,
+        required: false,
         trim: true,
     })
     fermentation: string;
 
     @Prop({
         type: Number,
-        required: true,
+        required: false,
         min: 0.0,
         max: 2.0,
     })
@@ -49,7 +49,7 @@ export class Beer extends Document {
 
     @Prop({
         type: Number,
-        required: true,
+        required: false,
         min: 0.0,
         max: 2.0
     })
@@ -57,7 +57,7 @@ export class Beer extends Document {
 
     @Prop({
         type: String,
-        required: true,
+        required: false,
         trim: true,
     })
     observation: string;

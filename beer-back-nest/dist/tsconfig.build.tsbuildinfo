@@ -2497,7 +2497,7 @@
         "affectsGlobalScope": false
       },
       "../src/beer/dto/create-beer.dto.ts": {
-        "version": "879122405c60ed231dc995c0eacd2c29f866d518b7e63366fb7a04ed6167533e",
+        "version": "5efb67735e805f0793fa5b482fab3b00d3f697ae9f72f9bdc59b583ab063143a",
         "signature": "5990b7c71d97045a529e2cc3e7e37fe3532f3d09e71b956b3333e4a69659a8ab",
         "affectsGlobalScope": false
       },
@@ -2637,7 +2637,7 @@
         "affectsGlobalScope": false
       },
       "../src/beer/schemas/beer.schema.ts": {
-        "version": "053d4071f6e57217596e6e605c633eb29b50001d13ead748ce019f1cc87f9f63",
+        "version": "0178836d78859a6aec8a98e2d44bf22fbad12210f9632a45aaf4410d63595725",
         "signature": "a64fa3782fb6b6e851ddd34eff724a49f8feb662981600b35021344a40737c4f",
         "affectsGlobalScope": false
       },

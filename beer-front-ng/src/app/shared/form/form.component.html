@@ -1,7 +1,14 @@
-<p>Formulaire d'ajout d'une bière!</p>
+
+<h2 mat-dialog-title *ngIf="isUpdateMode">Update {{ form.get('name').value }} </h2>
+<h2 mat-dialog-title *ngIf="!isUpdateMode">Formulaire d'ajout d'une bière!</h2>
 
 <mat-dialog-content>
   <form novalidate [formGroup]="form">
+
+    <p *ngIf="isUpdateMode">
+      <span style="width:100%">ID (disabled)</span><br/>
+      <span style="width:100%">{{model.id}}</span>
+    </p>
 
     <table class="full-width" cellspacing="0">
       <tr>
@@ -67,13 +74,13 @@
         <td class="middle-width">
           <mat-form-field appearance="fill" color="accent" >
             <mat-label>Soif</mat-label>
-            <select matNativeControl formControlName="thirst">
-              <option value="" selected></option>
-              <option value="0">0</option>
-              <option value="0.5">0.5</option>
-              <option value="1">1</option>
-              <option value="1.5">1.5</option>
-              <option value="2">2</option>
+            <select matNativeControl formControlName="thirst" >
+              <option selected></option>
+              <option [ngValue]=0>0</option>
+              <option [ngValue]=0.5>0.5</option>
+              <option [ngValue]=1>1</option>
+              <option [ngValue]=1.5>1.5</option>
+              <option [ngValue]=2>2</option>
             </select>
           </mat-form-field>
         </td>
@@ -82,7 +89,7 @@
 
     <p>
       <mat-form-field color="accent" >
-        <input matInput placeholder="Degree" formControlName="degree" minlength="1" required name="degree" />
+        <input type="number" matInput placeholder="Degree" formControlName="degree" minlength="1" required name="degree" />
         <mat-error *ngIf="form.get('degree').dirty && form.get('degree').hasError('required')">
           Degree is <strong>required</strong>
         </mat-error>

@@ -14,10 +14,10 @@
   </mat-card-content>
 
   <mat-card-content>
-    <button mat-button title="Delete" (click)="delete(beer)">
+    <button mat-button title="Delete" (click)="delete()">
       <mat-icon>delete</mat-icon>
     </button>
-    <button mat-button title="Edit" >
+    <button mat-button title="Edit" [routerLink]="['/edit', beer.id]">
       <mat-icon>edit</mat-icon>
     </button>
     <button mat-button title="Add" >

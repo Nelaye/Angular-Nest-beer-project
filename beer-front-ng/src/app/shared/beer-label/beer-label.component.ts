@@ -38,16 +38,15 @@ export class BeerLabelComponent implements OnInit {
   /**
    * Returns private property _delete$
    */
-  @Output('deletePerson') get delete$(): EventEmitter<Beer> {
+  @Output('deleteBeer') get delete$(): EventEmitter<Beer> {
     return this._delete$;
   }
 
   /**
-   * Function to emit event to delete current person
+   * Function to emit event to delete current beer
    */
-  delete(beer: Beer): void {
-    //this._delete$.emit(beer);
+  delete(): void {
+    this._delete$.emit(this._beer);
   }
-
 
 }

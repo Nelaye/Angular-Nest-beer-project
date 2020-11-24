@@ -24,6 +24,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { UpdateComponent } from './update/update.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {HttpClientModule} from '@angular/common/http';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import {HttpClientModule} from '@angular/common/http';
     ReactiveFormsModule,
     MatSelectModule,
     MatSidenavModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -51,17 +51,10 @@ export class FormComponent implements OnInit, OnChanges {
   }
 
   /**
-   * Function to emit event to cancel process
+   * Returns private property _isUpdateMode
    */
-  cancel(): void {
-    this._cancel$.emit();
-  }
-
-  /**
-   * Function to emit event to submit form and person
-   */
-  submit(beer: Beer): void {
-    this._submit$.emit(beer);
+  get isUpdateMode(): boolean {
+    return this._isUpdateMode;
   }
 
   /**
@@ -78,6 +71,22 @@ export class FormComponent implements OnInit, OnChanges {
   @Output('submit')
   get submit$(): EventEmitter<Beer> {
     return this._submit$;
+  }
+
+  /**
+   * Function to emit event to cancel process
+   */
+  cancel(): void {
+    this._cancel$.emit();
+  }
+
+  /**
+   * Function to emit event to submit form and person
+   */
+  submit(beer: Beer): void {
+    beer.bitterness = +beer.thirst; // convertion to number (without "")
+    beer.thirst = +beer.bitterness;
+    this._submit$.emit(beer);
   }
 
   ngOnInit(): void {

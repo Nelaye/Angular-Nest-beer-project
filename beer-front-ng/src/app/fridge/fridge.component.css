@@ -23,3 +23,8 @@ section {
   height: 100%;
   border: 1px solid #555;
 }
+
+mat-paginator{
+  position: fixed;
+  bottom: 20%;
+}

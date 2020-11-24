@@ -18,7 +18,8 @@
     </div>
 
     <section>
-      <app-beer-label [beer]="beer" *ngFor="let beer of beers"></app-beer-label>
+      <app-beer-label [beer]="beer" (deleteBeer)="delete($event)" *ngFor="let beer of binouzes"></app-beer-label>
+      <mat-paginator [length]="beers.length" [pageSize]="pageSize" (page)="pageEvent($event)"></mat-paginator>
     </section>
 
     <mat-divider></mat-divider>

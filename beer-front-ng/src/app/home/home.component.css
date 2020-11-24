@@ -9,4 +9,12 @@ p {
   height: 75%;
 }
 
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 1em;
+  font-family: Laksaman, serif;
+  font-weight: bold;
+}
+
 
