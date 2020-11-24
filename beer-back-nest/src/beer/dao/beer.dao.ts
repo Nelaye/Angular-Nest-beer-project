@@ -63,7 +63,7 @@ export class BeerDao {
      * @return {Observable<Beer | void>}
      */
     findByIdAndUpdate(id: string, beer: UpdateBeerDto): Observable<Beer | void> {
-        return from(this._beerModel.findByIdAndUpdate(id, beer, {new: true, runValisators: true}))
+        return from(this._beerModel.findByIdAndUpdate(id, beer, {new: true, runValidators: true}))
             .pipe(
                 map((doc: MongooseDocument) => !!doc ? doc.toJSON() : undefined),
             );

@@ -1,5 +1,5 @@
 import {ApiProperty} from "@nestjs/swagger";
-import { IsEmpty, IsNotEmpty, IsNumber, IsOptional, IsString } from 'class-validator';
+import {IsNotEmpty, IsNumber, IsOptional, IsString} from 'class-validator';
 
 export class CreateBeerDto {
     @ApiProperty({ name: 'name', description: 'Name of beer', example: 'Barbar' })

@@ -1,12 +1,12 @@
 import { Exclude, Expose, Type } from 'class-transformer';
-import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger'
+import { ApiProperty } from '@nestjs/swagger'
 
 @Exclude()
 export class BeerEntity {
     @ApiProperty({
         name: 'id',
         description: 'Unique identifier in the database',
-        example: '243'
+        example: '5fbbc1e428fddfcf2938b004'
     })
     @Expose()
     @Type(() => String)
