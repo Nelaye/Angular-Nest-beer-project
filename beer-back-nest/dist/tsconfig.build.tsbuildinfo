@@ -2642,7 +2642,7 @@
         "affectsGlobalScope": false
       },
       "../src/beer/dao/beer.dao.ts": {
-        "version": "750016f85c9982ac5af472301f648b8402ee70e3c71a4d53cc90e702d6540e86",
+        "version": "0349e61b4f318932144d8559f024ee2fc5372fc09890d6fc20cbd1eaaeb785ff",
         "signature": "2e7f19155be7e4ef7643d5c4375fc1bd534db3f3ea230a32c385569a513da8dd",
         "affectsGlobalScope": false
       },
@@ -2747,7 +2747,7 @@
         "affectsGlobalScope": false
       },
       "../src/beer/beer.controller.ts": {
-        "version": "d26c4e10e1c485442b0b83fce8382ea586b9933dfcb694ac8b9ba6bdfdb78c64",
+        "version": "a5cf385a7adcca9d8cb5b18ab53991492d52c3441249d5354fffe4bed7ceeea1",
         "signature": "7d07c1767666f73a8aeec3670cedbcbc8d99f4dbb26f82c81dc7df48cdd9a1a9",
         "affectsGlobalScope": false
       },

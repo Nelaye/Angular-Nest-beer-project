@@ -37,7 +37,7 @@ let BeerDao = class BeerDao {
             .pipe(operators_1.map((doc) => doc.toJSON()));
     }
     findByIdAndUpdate(id, beer) {
-        return rxjs_1.from(this._beerModel.findByIdAndUpdate(id, beer, { new: true, runValisators: true }))
+        return rxjs_1.from(this._beerModel.findByIdAndUpdate(id, beer, { new: true, runValidators: true }))
             .pipe(operators_1.map((doc) => !!doc ? doc.toJSON() : undefined));
     }
     findByIdAndRemove(id) {

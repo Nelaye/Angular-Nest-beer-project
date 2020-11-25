@@ -43,7 +43,7 @@ export class BeerController {
     }
 
     /**
-     * Handler to answer to GET /beer route
+     * Handler to answer to GET /beers route
      *
      * @returns Observable<BeerEntity[] | void>
      */
@@ -55,7 +55,7 @@ export class BeerController {
     }
 
     /**
-     * Handler to answer to GET /beer/random route
+     * Handler to answer to GET /beers/random route
      *
      * @returns Observable<BeerEntity | void>
      */
@@ -67,7 +67,7 @@ export class BeerController {
     }
 
     /**
-     * Handler to answer to GET /beer/:id route
+     * Handler to answer to GET /beers/:id route
      *
      * @param {HandlerParams} params list of route params to take beer id
      * @returns Observable<BeerEntity>
@@ -88,7 +88,7 @@ export class BeerController {
     }
 
     /**
-     * Handler to answer to POST /beer route
+     * Handler to answer to POST /beers route
      *
      * @param createBeerDto data to create
      * @returns Observable<BeerEntity>
@@ -104,7 +104,7 @@ export class BeerController {
     }
 
     /**
-     * Handler to answer to PUT /beer/:id route
+     * Handler to answer to PUT /beers/:id route
      *
      * @param {HandlerParams} parames list of route params to take beer id
      * @param updateBeerDto data to update
@@ -128,7 +128,7 @@ export class BeerController {
     }
 
     /**
-     * Handler to answer to DELETE /beer/:id route
+     * Handler to answer to DELETE /beers/:id route
      *
      * @param {HandlerParams} params list of route params to take beer id
      * @returns Observable<void>
