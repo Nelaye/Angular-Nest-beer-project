@@ -2642,8 +2642,13 @@
         "affectsGlobalScope": false
       },
       "../src/beer/dao/beer.dao.ts": {
+<<<<<<< HEAD
         "version": "8f69ee3be7b9c2cc19a699c32ed7c93f80b7d522147036feefcbcd934f4a4152",
         "signature": "824c98d210c98c3b20046ecb75c8d949b4d6579b1b0449b48d06927ed652520d",
+=======
+        "version": "0349e61b4f318932144d8559f024ee2fc5372fc09890d6fc20cbd1eaaeb785ff",
+        "signature": "2e7f19155be7e4ef7643d5c4375fc1bd534db3f3ea230a32c385569a513da8dd",
+>>>>>>> aa9cad448c8d1a8c38856d4f5acc3e4c1a87ac08
         "affectsGlobalScope": false
       },
       "../src/beer/beer.service.ts": {
@@ -2749,6 +2754,7 @@
       "../src/beer/beer.controller.ts": {
         "version": "86a3f0f8e287a28c51073b20d7671e38d0f1d9b5fc4c4beacd4955a37967f062",
         "signature": "edcbb91b42194bb81cbc91c629d9a1f9fb624e73f4438d4fd115cb5298191f2b",
+
         "affectsGlobalScope": false
       },
       "../src/beer/beer.module.ts": {

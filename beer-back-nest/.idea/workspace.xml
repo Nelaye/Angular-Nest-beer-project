@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="620be40e-9100-4f73-88b9-000bb02a9f74" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/beer/dao/beer.dao.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/beer/dao/beer.dao.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beer/dto/update-beer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/beer/dto/update-beer.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beer-front-ng/src/app/shared/form/form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../beer-front-ng/src/app/shared/form/form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/beer/beer.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/beer/beer.controller.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,7 @@
       <workItem from="1606155403428" duration="1814000" />
       <workItem from="1606207647747" duration="637000" />
       <workItem from="1606215658087" duration="900000" />
-      <workItem from="1606314996460" duration="118000" />
+      <workItem from="1606314996460" duration="1453000" />
     </task>
     <servers />
   </component>
@@ -90,10 +90,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="743" y="271" width="424" height="520" key="FileChooserDialogImpl" timestamp="1605978709429">
+    <state x="743" y="271" width="424" height="520" key="FileChooserDialogImpl" timestamp="1606315823550">
       <screen x="0" y="27" width="1920" height="995" />
     </state>
-    <state x="743" y="271" width="424" height="520" key="FileChooserDialogImpl/0.27.1920.995/1920.0.1920.1080@0.27.1920.995" timestamp="1605978709429" />
+    <state x="743" y="271" width="424" height="520" key="FileChooserDialogImpl/0.27.1920.995/1920.0.1920.1080@0.27.1920.995" timestamp="1606315823550" />
     <state width="1897" height="116" key="GridCell.Tab.0.bottom" timestamp="1605978801821">
       <screen x="0" y="27" width="1920" height="995" />
     </state>
@@ -110,6 +110,10 @@
       <screen x="0" y="27" width="1920" height="995" />
     </state>
     <state width="1897" height="116" key="GridCell.Tab.0.right/0.27.1920.995/1920.0.1920.1080@0.27.1920.995" timestamp="1605978801821" />
+    <state x="719" y="208" width="472" height="640" key="RollbackChangesDialog" timestamp="1606315637409">
+      <screen x="0" y="27" width="1920" height="995" />
+    </state>
+    <state x="719" y="208" width="472" height="640" key="RollbackChangesDialog/0.27.1920.995/1920.0.1920.1080@0.27.1920.995" timestamp="1606315637409" />
     <state x="449" y="159" width="1022" height="737" key="SettingsEditor" timestamp="1605978712108">
       <screen x="0" y="27" width="1920" height="995" />
     </state>
