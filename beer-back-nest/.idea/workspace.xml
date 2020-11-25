@@ -20,48 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="620be40e-9100-4f73-88b9-000bb02a9f74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/user/dao/user.dao.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/dao/user.dao.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/dao/user.dao.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/dto/create-user.dto.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/dto/create-user.dto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/dto/create-user.dto.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/dto/update-user.dto.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/dto/update-user.dto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/dto/update-user.dto.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/entities/user.entity.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/entities/user.entity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/entities/user.entity.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/interceptor/user.interceptor.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/interceptor/user.interceptor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/interceptor/user.interceptor.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/schemas/user.schema.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/schemas/user.schema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/schemas/user.schema.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/user.service.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/user.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/user.service.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/validators/handler-params.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/validators/handler-params.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/user/validators/handler-params.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/dao/user.dao.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/dto/create-user.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/dto/update-user.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/entities/user.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/interceptor/user.interceptor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/schemas/user.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/user.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/user/validators/handler-params.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/beer/dto/create-beer.dto.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/beer/dto/create-beer.dto.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/beer/entities/beer.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/beer/entities/beer.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/beer/entities/beer.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/beer/entities/beer.entity.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/beer/schemas/beer.schema.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/beer/schemas/beer.schema.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/beer/dao/beer.dao.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/beer/dao/beer.dao.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/dist/tsconfig.build.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beer/dao/beer.dao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/beer/dao/beer.dao.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beer/dto/create-beer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/beer/dto/create-beer.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beer/entities/beer.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/beer/entities/beer.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beer/schemas/beer.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/beer/schemas/beer.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beer-front-ng/src/app/shared/service/beer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../beer-front-ng/src/app/shared/service/beer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/beer/dto/update-beer.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/beer/dto/update-beer.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beer-front-ng/src/app/shared/form/form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../beer-front-ng/src/app/shared/form/form.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +70,7 @@
       <workItem from="1606155403428" duration="1814000" />
       <workItem from="1606207647747" duration="637000" />
       <workItem from="1606215658087" duration="900000" />
+      <workItem from="1606314996460" duration="118000" />
     </task>
     <servers />
   </component>

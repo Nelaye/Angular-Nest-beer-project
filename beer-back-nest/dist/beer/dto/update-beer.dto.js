@@ -23,49 +23,42 @@ __decorate([
 __decorate([
     swagger_1.ApiProperty({ name: 'country', description: 'Origin country of beer', example: 'Belgique' }),
     class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], UpdateBeerDto.prototype, "country", void 0);
 __decorate([
     swagger_1.ApiProperty({ name: 'brewery', description: 'Brewery of beer', example: 'Lefèbvre' }),
     class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], UpdateBeerDto.prototype, "brewery", void 0);
 __decorate([
     swagger_1.ApiProperty({ name: 'degree', description: 'Degree of beer', example: 8 }),
     class_validator_1.IsNumber(),
-    class_validator_1.IsNotEmpty(),
     class_validator_1.IsOptional(),
     __metadata("design:type", Number)
 ], UpdateBeerDto.prototype, "degree", void 0);
 __decorate([
     swagger_1.ApiProperty({ name: 'fermentation', description: 'Fermentation of beer', example: 'haute' }),
     class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], UpdateBeerDto.prototype, "fermentation", void 0);
 __decorate([
     swagger_1.ApiProperty({ name: 'bitterness', description: 'Bitterness of beer', example: 1 }),
     class_validator_1.IsNumber(),
-    class_validator_1.IsNotEmpty(),
     class_validator_1.IsOptional(),
     __metadata("design:type", Number)
 ], UpdateBeerDto.prototype, "bitterness", void 0);
 __decorate([
     swagger_1.ApiProperty({ name: 'thirst', description: 'Thirst of beer', example: 1.5 }),
     class_validator_1.IsNumber(),
-    class_validator_1.IsNotEmpty(),
     class_validator_1.IsOptional(),
     __metadata("design:type", Number)
 ], UpdateBeerDto.prototype, "thirst", void 0);
 __decorate([
     swagger_1.ApiProperty({ name: 'observation', description: 'Observation of beer', example: 'Bière au miel' }),
     class_validator_1.IsString(),
-    class_validator_1.IsNotEmpty(),
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], UpdateBeerDto.prototype, "observation", void 0);
